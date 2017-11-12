@@ -13,6 +13,7 @@ sleep 10
 
 hostapd hostapd.conf -B
 sleep 10
+
 #hostapd.conf里面有具体的所建wifi的配置信息
 
 route add default gw 192.168.0.1
@@ -25,4 +26,5 @@ ifconfig wlan0 192.168.0.1
 sleep 10
 
 wpa_supplicant -Dwext -iwlan0 -cwpa_suplicant.conf & -B
+
 #wpa_supplicant.conf属于配置文件，其中指明了要连接的wifi信息
